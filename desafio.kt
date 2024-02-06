@@ -1,6 +1,6 @@
-// Playground: https://pl.kotl.in/fMbOvNuC2
+// Playground 
 
-enum class Nivel { BASICO, INTERMEDIARIO, AVANÇADO }
+enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
 class Usuario(val nome: String) {
     fun exibirUsuario() {
@@ -28,22 +28,23 @@ data class Formacao(val nome: String, val nivel: Nivel, var conteudos: List<Cont
 }
 
 fun main() {
-    val formacaoKotlin = Formacao("Kotlin Basico", Nivel.BASICO, listOf(
+    val formacaoKotlin = Formacao("Kotlin", Nivel.BASICO, listOf(
     	ConteudoEducacional("introdução ao Kotlin"),
         ConteudoEducacional("POO com Kotlin"),
         ConteudoEducacional("Praticas Kotlin")
     ))
     
-    //	val formacaoAndroid = Formacao("Android", Nivel.AVANÇADO, listOf(
+    //	val formacaoAndroid = Formacao("Android", Nivel.AVANCADO, listOf(
     //		ConteudoEducacional("Aplicativos com Kotlin")
     //	))
     
     val usuario0 = Usuario("SucoDeUva")
     
+	usuario0.exibirUsuario()
+
     formacaoKotlin.matricular(usuario0)
     
     formacaoKotlin.exibirFormacao()
-    usuario0.exibirUsuario()
     
    // TODO("Analise as classes modeladas para este domínio de aplicação e pense em formas de evoluí-las.")
    // TODO("Simule alguns cenários de teste. Para isso, crie alguns objetos usando as classes em questão.")
